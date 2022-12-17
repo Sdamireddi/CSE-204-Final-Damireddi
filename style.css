@@ -1,0 +1,42 @@
+.headerstuff{
+    width: 100%;
+    background-color: thistle;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(66, 66, 66);
+
+}
+.headerstuff h1, .headerstuff h2{
+    margin-left: 5%;
+}
+
+
+#favorites{
+    float: left;
+    width: 40%;
+    padding-left: 5%;
+}
+#suggestions{
+    float: right;
+    width: 40%;
+    padding-right: 5%;
+}
+.top{
+    width:100%;
+    text-align: center;
+    padding-top: 30px;
+}
+.deleteButton{
+    float:right;
+    position:relative;
+    top: -40px;
+    right:10px;
+
+}
+#genSug{
+    text-align: center;
+    position: relative;
+
+}
+#subSug{
+    text-align: center;
+}

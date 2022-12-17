@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Culturo</title>
+</head>
+
+<body>
+    <header>
+        <div class="headerstuff">
+            <h1 class="center" id="title">Culturo</h1>
+            <h2 class="center" id="author">A Gateway to Culture</h2>
+        </div>
+    </header>
+    <div id="favorites">
+        <div class="top">
+            <h3>Favorites</h3>
+        </div>
+
+        <hr>
+
+        <div id="likesDisplay">
+            <ul id="listOfLikes">
+
+                <!-- <li> 
+                    <input class="completeBox" type="checkbox"> 
+                    <p>test item 1</p>
+                    <input class="deleteButton" type="button" name="deleteButton" value="X">
+                    <input class="completeBox" type="checkbox">
+                    <p>test item 4</p>
+                    <input class="deleteButton" type="button" name="deleteButton" value="X">           
+                </li> -->
+
+            </ul>
+        </div>
+
+        <div id="newItem">
+            <label for="newItemEnter">Add a new item:</label>
+            <input type="text" id="newItemEnter" required>
+            <button type="submit" id="submitNewItem">&#10003;</button>
+        </div>
+    </div>
+
+    <div id="suggestions">
+        <div class="top">
+            <h3>Suggestions</h3>
+        </div>
+
+        <hr>
+
+        <div id="suggestionsDisplay">
+            <h3>Suggested Artist</h3>
+            <h4 id="sugArtistName"></h4>
+        </div>
+        <div id="subSug">
+            <button type="submit" id="genSug">Generate Suggestion</button>
+        </div>
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+    
+    
+</body>
+
+
+</html>

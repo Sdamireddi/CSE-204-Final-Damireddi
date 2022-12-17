@@ -45,7 +45,7 @@ function addItem() {
     removeB.className = "deleteButton";
     removeB.addEventListener("click", function (event) { deleteItem(event) })
     li.appendChild(removeB);
-
+    li.appendChild(document.createElement("hr"));
     list.appendChild(li);
 }
 
@@ -83,22 +83,57 @@ function generateSuggestions() {
         if (this.readyState == 4 && this.status == 200) {
             let sugArtist = JSON.parse(this.responseText);
             console.log(sugArtist);
-             sugName = sugArtist.Results.Name;
-             sugDesc = sugArtist.Results.wTeaser;
-             youTube = sugArtist.Results.yUrl;
+             sugName = sugArtist.Similar.Results[0].Name;
+             sugDesc = sugArtist.Similar.Results[0].wTeaser;
+             youTube = sugArtist.Similar.Results[0].yUrl;
+             console.log(sugName);
+             document.getElementById("sugArtistName").innerHTML = sugName;
+             document.getElementById("wikiName").innerHTML = sugName;
+             document.getElementById("youtubeName").innerHTML = sugName;
+             console.log(sugDesc)
+             document.getElementById("desc").innerHTML = sugDesc;
+             console.log(youTube)
+             document.getElementById("video").src=youTube;
+
         }
     }
-    xhttp.open("GET", buildURL(), true);
+    xhttp.open("GET", "https://cors-anywhere.herokuapp.com/"+buildURL(), true);
     xhttp.setRequestHeader("x-api-key", key);
     xhttp.send();
     // let check = buildURL();
     // fetch(buildURL())
+    // fetch(buildURL(), {
+    //   credentials: 'include',
+    //   method: 'GET'
+
+    //   }).then(result => console.log('success====:', result))
+    //     .catch(error => console.log('error============:', error));
+
+    
 
 }
 
 function likeArtist() {
     //have event listeners for each of the suggested artists. If like button clicked run addItem() type function
     //after adding the new artist, rerun buildSuggestions()
+
+    
+    let list = document.getElementById("listOfLikes");
+    let li = document.createElement("li");
+    let p = document.createElement("p");
+    p.innerHTML = document.getElementById("sugArtistName").innerHTML;
+    p.className = "likedArtistNames";
+    document.getElementById("newItemEnter").value = "";
+    li.appendChild(p);
+
+    let removeB = document.createElement("INPUT");
+    removeB.setAttribute("type", "button");
+    removeB.className = "deleteButton";
+    removeB.addEventListener("click", function (event) { deleteItem(event) })
+    li.appendChild(removeB);
+    li.appendChild(document.createElement("hr"));
+    list.appendChild(li);
+    generateSuggestions();
 
 }
 
@@ -110,7 +145,8 @@ function enter(event) {
 }
 
 
-
+let sugLove = document.getElementById("likeSugB")
+sugLove.addEventListener("click", function (event) { likeArtist() });
 
 let submitB = document.getElementById("submitNewItem")
 submitB.addEventListener("click", function (event) { addItem() });

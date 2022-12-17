@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <link href="style.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -16,17 +16,18 @@
             <h2 class="center" id="author">A Gateway to Culture</h2>
         </div>
     </header>
-    <div id="favorites">
-        <div class="top">
-            <h3>Favorites</h3>
-        </div>
+    <div id="main">
+        <div id="favorites">
+            <div class="top">
+                <h3>Favorites</h3>
+            </div>
 
-        <hr>
+            <hr>
 
-        <div id="likesDisplay">
-            <ul id="listOfLikes">
+            <div id="likesDisplay">
+                <ul id="listOfLikes">
 
-                <!-- <li> 
+                    <!-- <li> 
                     <input class="completeBox" type="checkbox"> 
                     <p>test item 1</p>
                     <input class="deleteButton" type="button" name="deleteButton" value="X">
@@ -35,38 +36,68 @@
                     <input class="deleteButton" type="button" name="deleteButton" value="X">           
                 </li> -->
 
-            </ul>
+                </ul>
+            </div>
+
+            <div id="newItem">
+                <label for="newItemEnter">Add a new item:</label>
+                <input type="text" id="newItemEnter" required>
+                <button type="submit" id="submitNewItem">&#10003;</button>
+            </div>
         </div>
 
-        <div id="newItem">
-            <label for="newItemEnter">Add a new item:</label>
-            <input type="text" id="newItemEnter" required>
-            <button type="submit" id="submitNewItem">&#10003;</button>
+        <div id="suggestions">
+            <div class="top">
+                <h3>Suggested Artist</h3>
+            </div>
+
+            <hr>
+
+            <div id="suggestionsDisplay">
+                <h4 id="sugArtistName">Generate First!!</h4>
+            </div>
+            <div id="sugLinks">
+                <a href="#wikiInfo">Info on the Artist</a>
+                <a href="#youtube">Artist YouTube</a>
+            </div>
+            <div id="likeSug">
+                <button type="submit" id="likeSugB">Like Suggestion</button>
+            </div>
+            <div id="subSug">
+                <button type="submit" id="genSug">Generate Suggestion</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="tab-content" id="wikiInfo">
+        <div class="backgroundWiki">
+            <h3 id="wikiName">Generate First!!</h3>
+            <p id="desc"></p>
+            <a id="wikiLeave" href="#main">Exit Wiki View</a>
         </div>
     </div>
 
-    <div id="suggestions">
-        <div class="top">
-            <h3>Suggestions</h3>
-        </div>
-
-        <hr>
-
-        <div id="suggestionsDisplay">
-            <h3>Suggested Artist</h3>
-            <h4 id="sugArtistName"></h4>
-        </div>
-        <div id="subSug">
-            <button type="submit" id="genSug">Generate Suggestion</button>
+    <div class="tab-content" id="youtube">
+        <div class="backgroundWiki2">
+            <h3 id="youtubeName">Generate First!!</h3>
+            <iframe id="video" src="filler"></iframe>
+            <a id="tubeLeave" href="#main">Exit YouTube View</a>
         </div>
     </div>
-
-
-
 
     <script src="script.js"></script>
-    
-    
+
+
+    <footer>
+        <div id="footStuff">
+            <p>This Website runs on the >>>>> API. For more info on the API. Click the link titled "API Info" below. To
+                bypas CORS testing issues, click the link titled "CORS Problems"</p>
+            <a href="https://tastedive-api-documentation.readthedocs.io/en/latest/index.html#">--API Info--</a>
+            <a href="https://cors-anywhere.herokuapp.com/">--CORS Problems--</a>
+
+        </div>
+    </footer>
+
 </body>
 
 

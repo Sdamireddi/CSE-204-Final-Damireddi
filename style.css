@@ -9,6 +9,10 @@
     margin-left: 5%;
 }
 
+#listOfLikes li{
+    text-decoration: none;
+}
+
 
 #favorites{
     float: left;
@@ -19,6 +23,7 @@
     float: right;
     width: 40%;
     padding-right: 5%;
+    text-align: center;
 }
 .top{
     width:100%;
@@ -39,4 +44,106 @@
 }
 #subSug{
     text-align: center;
+}
+#sugLinks a{
+    padding: 10px;
+}
+
+#sugLinks {
+    padding-bottom: 10px;
+}
+
+.tab-content {
+    display: none;
+    z-index: 0;
+}
+
+.tab-content:target {
+    display: block;
+    position: absolute;
+    z-index:996
+}
+#main:target{
+    z-index: 999;
+}
+
+#wikiInfo,
+#youtube{
+    text-align: center;
+    width:100%;
+    height: 100%;
+    background-color: rgba(98, 101, 101, 0.371);
+}
+.backgroundWiki{
+    text-align: center;
+    position: fixed;
+    top: -30px;
+    width: 80%;
+    margin: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    background-color: aliceblue;
+    border: 2px solid black;
+    border-radius: 2%;
+}
+.backgroundWiki2{
+    text-align: center;
+    position: fixed;
+    top: -30px;
+    width: 80%;
+    height: 70%;
+    margin: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    background-color: aliceblue;
+    border: 2px solid black;
+    border-radius: 2%;
+}
+#wikiLeave,
+#tubeLeave{
+    margin-top: 30px;
+    background-color: rgba(191, 160, 220, 0.745);
+    padding: 5px;
+    border-radius: 5%;
+    border: 1px rgba(0, 0, 0, 0.745);
+    float: clear;
+}
+#tubeLeave{
+    float: none;
+}
+#video{
+    width: 95%;
+    margin: 5%;
+    height: 70%;
+}
+
+#wikiLeave:hover,
+#tubeLeave:hover{
+    background-color: rgba(191, 160, 220, 0.95);
+    border: 1px rgba(0, 0, 0, 0.95);
+}
+.tab-content a:link,
+.tab-content a:visited,
+.tab-content a:focus,
+.tab-content a:hover,
+.tab-content a:active{
+    color: black;
+}
+#footStuff{
+    position:fixed;
+    width: 100%;
+    bottom: 0px;
+    background-color: rgb(205, 205, 205);
+    text-align: center;
+    float: clear;
+}
+li:hover{
+    color: rgb(123, 123, 123);
+}
+#likeSug{
+    margin-bottom: 20px;
 }

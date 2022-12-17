@@ -42,6 +42,7 @@ function addItem() {
 
     let removeB = document.createElement("INPUT");
     removeB.setAttribute("type", "button");
+    removeB.setAttribute("value", "X");
     removeB.className = "deleteButton";
     removeB.addEventListener("click", function (event) { deleteItem(event) })
     li.appendChild(removeB);
@@ -128,6 +129,7 @@ function likeArtist() {
 
     let removeB = document.createElement("INPUT");
     removeB.setAttribute("type", "button");
+    removeB.setAttribute("value", "X");
     removeB.className = "deleteButton";
     removeB.addEventListener("click", function (event) { deleteItem(event) })
     li.appendChild(removeB);

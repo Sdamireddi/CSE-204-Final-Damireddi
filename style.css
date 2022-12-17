@@ -1,51 +1,60 @@
-.headerstuff{
+.headerstuff {
     width: 100%;
     background-color: thistle;
     padding-bottom: 10px;
     border-bottom: 2px solid rgb(66, 66, 66);
 
 }
-.headerstuff h1, .headerstuff h2{
+
+.headerstuff h1,
+.headerstuff h2 {
     margin-left: 5%;
 }
 
-#listOfLikes li{
-    text-decoration: none;
+#listOfLikes li {
+    list-style: none;
 }
 
 
-#favorites{
+#favorites {
+    text-align: center;
     float: left;
     width: 40%;
     padding-left: 5%;
 }
-#suggestions{
+
+#suggestions {
     float: right;
     width: 40%;
     padding-right: 5%;
     text-align: center;
 }
-.top{
-    width:100%;
+
+.top {
+    width: 100%;
     text-align: center;
     padding-top: 30px;
 }
-.deleteButton{
-    float:right;
-    position:relative;
+
+.deleteButton {
+    float: right;
+    position: relative;
     top: -40px;
-    right:10px;
+    right: 10px;
 
 }
-#genSug{
+
+#genSug {
     text-align: center;
     position: relative;
 
 }
-#subSug{
+
+#subSug {
     text-align: center;
 }
-#sugLinks a{
+
+#sugLinks a {
     padding: 10px;
 }
 
@@ -61,20 +70,22 @@
 .tab-content:target {
     display: block;
     position: absolute;
-    z-index:996
+    z-index: 996
 }
-#main:target{
+
+#main:target {
     z-index: 999;
 }
 
 #wikiInfo,
-#youtube{
+#youtube {
     text-align: center;
-    width:100%;
+    width: 100%;
     height: 100%;
     background-color: rgba(98, 101, 101, 0.371);
 }
-.backgroundWiki{
+
+.backgroundWiki {
     text-align: center;
     position: fixed;
     top: -30px;
@@ -88,7 +99,8 @@
     border: 2px solid black;
     border-radius: 2%;
 }
-.backgroundWiki2{
+
+.backgroundWiki2 {
     text-align: center;
     position: fixed;
     top: -30px;
@@ -103,47 +115,153 @@
     border: 2px solid black;
     border-radius: 2%;
 }
+
 #wikiLeave,
-#tubeLeave{
+#tubeLeave {
     margin-top: 30px;
     background-color: rgba(191, 160, 220, 0.745);
     padding: 5px;
     border-radius: 5%;
     border: 1px rgba(0, 0, 0, 0.745);
-    float: clear;
+
 }
-#tubeLeave{
+
+#tubeLeave {
     float: none;
 }
-#video{
+
+#video {
     width: 95%;
     margin: 5%;
     height: 70%;
 }
 
 #wikiLeave:hover,
-#tubeLeave:hover{
+#tubeLeave:hover {
     background-color: rgba(191, 160, 220, 0.95);
     border: 1px rgba(0, 0, 0, 0.95);
 }
+
 .tab-content a:link,
 .tab-content a:visited,
 .tab-content a:focus,
 .tab-content a:hover,
-.tab-content a:active{
+.tab-content a:active {
     color: black;
 }
-#footStuff{
-    position:fixed;
+
+#footStuff {
+    position: fixed;
     width: 100%;
     bottom: 0px;
     background-color: rgb(205, 205, 205);
     text-align: center;
-    float: clear;
+
+    border: 1px solid black;
 }
-li:hover{
+
+li:hover {
     color: rgb(123, 123, 123);
 }
-#likeSug{
+
+#likeSug {
     margin-bottom: 20px;
+}
+
+#submitNewItem {
+    border-radius: 15%;
+}
+
+#submitNewItem:hover {
+    background-color: rgba(108, 167, 19, 0.731);
+}
+
+.deleteButton {
+    border-radius: 15%;
+}
+
+.deleteButton:hover {
+    background-color: rgba(167, 26, 19, 0.731);
+}
+
+#coolButtons {
+    text-align: center;
+    position: fixed;
+    bottom: 65px;
+    background-color: rgba(255, 235, 205, 0.571);
+    width: 100%;
+    height: 120px;
+    padding-top: 10px;
+    border: 1px solid black;
+}
+
+#likeSug {
+    top: 20px;
+    position: relative;
+    margin-left: 25%;
+    float: left;
+}
+
+#subSug {
+    top: 20px;
+    position: relative;
+    margin-right: 25%;
+    float: right;
+}
+
+#likeSugB,
+#genSug {
+    border-radius: 7.5%;
+}
+
+#filler {
+    position: fixed;
+    bottom: 185px;
+    background-color: rgba(216, 191, 216, 0.452);
+    width: 100%;
+    height: 120px;
+    padding-top: 10px;
+    border: 1px solid black;
+}
+
+#likeSugB:hover,
+#genSug:hover {
+    background-color: rgba(108, 167, 19, 0.731);
+}
+
+@media (device-width < 800px) {
+
+    #favorites {
+        text-align: center;
+        width: 100%;
+        padding-left: 0%;
+    }
+
+    #suggestions {
+        text-align: center;
+        width: 100%;
+        padding-right: 0%;
+
+    }
+
+    #main {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 40pt;
+    }
+
+    h2 {
+        font-size: 40pt;
+    }
+
+    h3 {
+        font-size: 40pt;
+    }
+
+    h4 {
+        font-size: 40pt;
+    }
+
 }

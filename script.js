@@ -78,21 +78,21 @@ function buildURL() {
 }
 
 function generateSuggestions() {
-    // var xhttp = new XMLHttpRequest();
-    // xhttp.onreadystatechange = function () {
-    //     if (this.readyState == 4 && this.status == 200) {
-    //         let sugArtist = JSON.parse(this.responseText);
-    //         console.log(sugArtist);
-    //          sugName = sugArtist.Results.Name;
-    //          sugDesc = sugArtist.Results.wTeaser;
-    //          youTube = sugArtist.Results.yUrl;
-    //     }
-    // }
-    // xhttp.open("GET", buildURL(), true);
-    // xhttp.setRequestHeader("x-api-key", key);
-    // xhttp.send();
-    let check = buildURL();
-    fetch(buildURL())
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            let sugArtist = JSON.parse(this.responseText);
+            console.log(sugArtist);
+             sugName = sugArtist.Results.Name;
+             sugDesc = sugArtist.Results.wTeaser;
+             youTube = sugArtist.Results.yUrl;
+        }
+    }
+    xhttp.open("GET", buildURL(), true);
+    xhttp.setRequestHeader("x-api-key", key);
+    xhttp.send();
+    // let check = buildURL();
+    // fetch(buildURL())
 
 }
 
